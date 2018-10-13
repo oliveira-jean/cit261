@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Javascript Mobile Development - CIT261</title>
+        <meta charset="UTF-8">
+        <meta name="Description" CONTENT="CIT261 - Javascript Mobile Development">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Rye:400,300,700|Roboto"  rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="./css/reset.css"> <!-- CSS reset -->
+        <link rel="stylesheet" href="./css/mainstyle.css"> <!-- Main style -->
+        <link rel="stylesheet" href="./css/style12.css"> <!-- This topic CSS code -->
+    </head>
+
+    <!-- body content -->
+    <body>
+
+        <!-- The header -->
+        <header id="pageHeader">
+            <h1 class="title">Javascript Mobile Development - CIT261</h1>
+        </header>
+
+        <!-- The Main Content -->
+        <div id="mainArticle">
+            <div class="article_title">
+                <a>Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries</a>
+            </div>
+            <div class="article_content">
+                <div class="container">
+                    <div class="box">
+                        <h2 class="text">I am a Box</h2>
+                        <p class="text">Hover and hold left key here</p>
+                    </div>
+                </div>    
+                <div class="article_code">
+                    <div class="css_code">
+                        <h2>CSS code</h2><br>
+                        <p></p>
+                        <p>.box{</p>
+                        <p>justify-content:center;</p>
+                        <p>cursor:pointer;</p>
+                        <p>background:yellow;</p>
+                        <p>border:2px solid #000;</p>
+                        <p>width:200px;</p>
+                        <p>height:200px;</p>
+                        <p>transition: transform 2s cubic-bezier(.4,-0.88,.73,1.77);</p>
+                        <p>}</p>
+                        <p>.box:hover{</p>
+                        <p>transform:perspective(200px) rotateZ(360deg)</p>
+                        <p>}</p>
+                        <p>.box:active{</p>
+                        <p>transform:translate(80vh) scale(1.5)</p>
+                        <p>}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- navigation -->
+        <nav id="mainNav"> 
+            <div class="navbar">
+                <ul>
+                     <li><a href="index.html" title="Home" class="nav-button">Home</a></li>
+                    <li><a href="js1-01.html" class="nav-button">JavaScript-1</a></li>
+                    <li><a href="js2-02.html" class="nav-button">JavaScript-2</a></li>
+                    <li><a href="json-03.html" class="nav-button">JSON Parse|Stringify</a></li>
+                    <li><a href="ajaxjson-04.html" class="nav-button">Ajax->JSON</a></li>
+                    <li><a href="localstorage-05.html" class="nav-button">Local Storage</a></li>
+                    <li><a href="dom-06.html" class="nav-button">DOM Manipulation</a></li>
+                    <li><a href="jsmanipulating-07.html" class="nav-button">JS Manipulating</a></li>
+                    <li><a href="jstriggering-08.html" class="nav-button">JS triggering</a></li>
+                    <li><a href="jsevents-09.html" class="nav-button">JS Events</a></li>
+                    <li><a href="html5tags-10.html" class="nav-button">HTML5 Tags</a></li>
+                    <li><a href="css3transform-11.html" class="nav-button">CSS3 Transform</a></li>
+                    <li><a href="css3transition-12.html" class="nav-button">CSS3 Transition</a></li>
+                    <li><a href="css3animation-13.html" class="nav-button">CSS3 Animation</a></li>
+                    <li><a href="project.html" class="nav-button">Project</a></li>
+                </ul> 
+            </div>   
+        </nav>  
+
+        <!-- Side information  -->
+        <div id="siteAds">
+            <h1></h1>
+        </div>
+
+        <!-- footer information -->
+        <footer id="pageFooter"> 
+            <p>2018 JavaScript Mobile Development.</p>
+            <p>Jean Oliveira - Portfolio.</p>
+            <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
+        </footer> 
+
+    </body>
+</html>
