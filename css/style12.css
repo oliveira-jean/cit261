@@ -28,7 +28,7 @@
 .button1:hover{
   width: 200px;
   height: 180px;
-  border: 3px solid #0ee631;
+  border: 5px solid #0ee631;
   font-size: 1.0em;
 }
 .button2{
