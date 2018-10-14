@@ -1,37 +1,49 @@
-.container, .box, .text{
+.container, .button{
   display:flex;
   justify-content:flex-start;
   align-items:center;
 }
-
 .container{
-  height: 50%;
-  width:100%;  
-  padding:1% 1% 1% 3%;
- }
- 
- .box{
-  justify-content:center;
-  flex-direction: column;
+  flex-direction:column;
+  justify-content:space-around;
+  height: 50vmax;
+  width:90vmax;
+  padding:2% 2% 2% 5%;
+}
+.button{ /*Basic style for all buttons*/
   cursor:pointer;
-  background:yellow;
-  border:2px solid #000;
-  width:150px;
-  height:150px;
-  transition: transform 2s cubic-bezier(.4,-0.88,.73,1.77);
- } 
-
-.text {
-  width: 80%;
-  color:green;
-  text-align:center;
-  font: 1.0em bold serif;
-} 
-
-.box:hover{
-   transform:perspective(200px) rotateZ(360deg) ;
+  justify-content:center;
+  font: italic bold 1em Georgia, serif;
+  border:1px solid #000;
+  width:140px;
+  height:60px;
+}
+.button1{
+  background:#fa9755;
+  border-radius:50%;
+  transition: all 1s ease-out;
+}
+.button1:hover{
+  width: 200px;
+  height: 180px;
+  border: 3px solid #0ee631;
+  font-size: 1.5em;
+}
+.button2{
+  background: #7dfec4;
+  border-radius:25%;
+  transition: background 2s ease-out, color 1s linear;
+}
+.button2:hover{
+  background: #048319;
+  color: white;
+}
+.button3{
+  background:#9fb9fd;
+  transition: width 2s cubic-bezier(.67,-0.57,.38,1.65);
+}
+.button3:hover{
+  width: 90%;
 }
 
-.box:active {
-   transform:translate(80vh) scale(1.5)
- }
+
