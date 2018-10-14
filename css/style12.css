@@ -42,7 +42,7 @@
 }
 .button3{
   background:#9fb9fd;
-  transition: width 2s cubic-bezier(.67,-0.57,.38,1.65);
+  transition: width 2s cubic-bezier(.6,-0.44,.44,1.4);
 }
 .button3:hover{
   width: 90%;
