@@ -6,14 +6,16 @@
 .container1{
   flex-direction:column;
   justify-content:space-around;
-  height: 50vmax;
-  width:90vmax;
+  height: 30vmax;
+  width:60vmax;
   padding:2% 2% 2% 5%;
+  border:1px solid #e0e1e5;
 }
 .button{ /*Basic style for all buttons*/
   cursor:pointer;
   justify-content:center;
-  font: italic bold 1em Georgia, serif;
+  font: italic bold .7em Georgia, serif;
+  color: black;
   border:1px solid #000;
   width:140px;
   height:60px;
@@ -27,7 +29,7 @@
   width: 200px;
   height: 180px;
   border: 3px solid #0ee631;
-  font-size: 1.5em;
+  font-size: 1.0em;
 }
 .button2{
   background: #7dfec4;
