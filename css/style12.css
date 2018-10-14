@@ -1,9 +1,9 @@
-.container, .button{
+.container1, .button{
   display:flex;
   justify-content:flex-start;
   align-items:center;
 }
-.container{
+.container1{
   flex-direction:column;
   justify-content:space-around;
   height: 50vmax;
