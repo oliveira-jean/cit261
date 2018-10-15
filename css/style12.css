@@ -14,7 +14,7 @@
 .button{ /*Basic style for all buttons*/
   cursor:pointer;
   justify-content:center;
-  font: italic bold .6em Georgia, serif;
+  font: italic bold .7em Georgia, serif;
   color: black;
   border:1px solid #000;
   width:140px;
