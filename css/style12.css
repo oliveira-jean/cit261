@@ -29,7 +29,7 @@
   width: 200px;
   height: 180px;
   border: 5px solid #0ee631;
-  font-size: 1.0em;
+  font-size: 1.2em;
 }
 .button2{
   background: #7dfec4;
@@ -42,7 +42,7 @@
 }
 .button3{
   background:#9fb9fd;
-  transition: width 2s cubic-bezier(.6,-0.44,.44,1.4);
+  transition: width 1.5s cubic-bezier(.6,-0.44,.44,1.4);
 }
 .button3:hover{
   width: 90%;
