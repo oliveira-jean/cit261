@@ -24,7 +24,7 @@ header{
 padding-top:1%;
 padding-bottom:1%;
 background-color:#1F2739;
- border:1px solid lightgreen;
+ /*border:1px solid lightgreen;*/
 }
 footer{
 padding: 1% 2% 1% 3%;
@@ -93,7 +93,7 @@ height: 100%;
 }
 
 .container {
- border:1px solid lightgreen;
+ /*border:1px solid lightgreen;*/
     text-align: left;
     overflow: hidden;
     width: 70%;
