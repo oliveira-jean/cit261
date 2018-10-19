@@ -1,1 +1,31 @@
-Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries
+body {
+  background-color: white;
+  overflow: hidden;
+}
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+.container1,
+.button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container1 {
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+  width: 60vmax;
+  margin-top: 1%;
+  padding: 2% 2% 2% 2%;
+  border: 1px solid gainsboro;
+}
+
+.container1 h1 {
+  font-size: 2.5em;
+  padding-bottom: .5%;
+}
+
+
+

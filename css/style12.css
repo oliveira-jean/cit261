@@ -1,58 +1,111 @@
-body{
-background-color:white;
+body {
+  background-color: white;
+  overflow: hidden;
 }
-.main{
-display: flex;
-justify-content: space-around;
+.main {
+  display: flex;
+  justify-content: space-around;
 }
-.container1, .button{
-  display:flex;
-  justify-content:flex-start;
-  align-items:center;
+.container1,
+.button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.container1{
-  flex-direction:column;
-  justify-content:space-around;
-  height: 40vmax;
-  width:60vmax;
-  padding:2% 2% 2% 2%;
-  border:1px solid gray;
+.container1 {
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+  width: 60vmax;
+  margin-top: 1%;
+  padding: 2% 2% 2% 2%;
+  border: 1px solid gainsboro;
 }
-.button{ /*Basic style for all buttons*/
-  cursor:pointer;
-  justify-content:center;
-  font: italic bold .7em Georgia, serif;
-  color: black;
-  border:1px solid #000;
-  width:140px;
-  height:60px;
+
+.container1 h1 {
+  font-size: 2.5em;
+  padding-bottom: .5%;
 }
-.button1{
-  background:#fa9755;
-  border-radius:50%;
-  transition: all 1s ease-out;
+
+#username {
+  display: flex;
+  flex-direction: row;
+  padding: 2% 2% 2% 2%;
+  background: darkslategray;
+  width: 42vw;
 }
-.button1:hover{
-  width: 200px;
-  height: 180px;
-  border: 5px solid #0ee631;
-  font-size: 1.2em;
+
+#username p {
+  color: antiquewhite;
+  font-weight: bold;
 }
-.button2{
-  background: #7dfec4;
-  border-radius:25%;
-  transition: background 2s ease-out, color 1s linear;
+
+#name {
+  align-content: center;
+  width: 10vw;
+  margin-left: 1em;
+  color: darkslategrey;
+  font-weight: bold;
+  transition: all 1s cubic-bezier(.36, .15, .27, .98);
 }
-.button2:hover{
-  background: #048319;
+
+#name:focus-within {
+  width: 35vw;
+  background: lightcyan;
+}
+
+#music label {
+  font-weight: bold;
+  padding: .5em 1em .5em 1em;
+  border: 1px solid gray;
+  border-radius: 10%;
+  margin-right: 2em;
+}
+
+input[type=checkbox]:checked + label {
   color: white;
-}
-.button3{
-  background:#9fb9fd;
-  transition: width 1.5s cubic-bezier(.6,-0.44,.44,1.4);
-}
-.button3:hover{
-  width: 90%;
+  background: limegreen;
+  transition: all 0.6s linear;
 }
 
+button[type=submit] {
+  display: block;
+  box-shadow: 6px 5px 13px 1px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to bottom, #d4e4ef 0%, #86aecc 100%);
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  color: darkblue;
+  transition: all .3s ease-out;
+}
 
+button[type=submit]:hover {
+  color: saddlebrown;
+}
+
+button[type=submit]:active {
+  box-shadow: -5px -5px 9px 1px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to bottom, #86aecc 0%, #d4e4ef 100%);
+  color: deepskyblue;
+}
+
+textarea {
+  display: block
+}
+
+textarea {
+  width: 400px;
+  height: 2em;
+  border: 3px solid gray;
+  transition: height .7s ease-out, background 1.5s ease-out, border 1.5s cubic-bezier(.36, .15, .27, .98);
+}
+
+textarea:focus {
+  background: lightcyan;
+  border: 3px solid blue;
+  height: 6em;
+}
+
+input[type=radio]checked + label {
+  color: limegreen;
+}
