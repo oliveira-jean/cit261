@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  overflow: visible;
+  overflow: hidden;
 }
 .main {
   display: flex;
@@ -62,7 +62,7 @@ body {
   margin-right: 2em;
 }
 
-input[type=checkbox]:checked + label {
+input[type=checkbox]:checked + label {/*get the first label of INPUT CHECKBOX checked*/
   color: white;
   background: limegreen;
   transition: all 0.6s linear;
@@ -76,10 +76,10 @@ button[type=submit] {
   height: 40px;
   font-weight: bold;
   color: darkblue;
-  transition: all .3s ease-out;
+  transition: all .3s ease-out;/*trasition for hover and  active*/
 }
 
-button[type=submit]:hover {
+button[type=submit]:hover {/* in hover,change the color*/
   color: saddlebrown;
 }
 
@@ -97,7 +97,7 @@ textarea {
   width: 400px;
   height: 2em;
   border: 3px solid gray;
-  transition: height .7s ease-out, background 1.5s ease-out, border 1.5s cubic-bezier(.36, .15, .27, .98);
+  transition: height .7s ease-out, background 1.5s ease-out, border 1.5s cubic-bezier(.36, .15, .27, .98);/*cubic-bezier time function example*/
 }
 
 textarea:focus {
