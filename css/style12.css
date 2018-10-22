@@ -47,7 +47,7 @@ position: fixed;
 
 #name {
   align-content: center;
-  width: 15vw;
+  width: 17vw;
   margin-left: 1em;
   color: darkslategrey;
   font-weight: bold;
@@ -112,7 +112,7 @@ textarea {
 textarea:focus {
   background: lightcyan;
   border: 3px solid blue;
-  height: 6em;
+  height: 9em;
 }
 
 input[type=radio]checked + label {
