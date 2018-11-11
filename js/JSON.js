@@ -6,6 +6,12 @@
     var city = document.getElementById('usercity').value;
     var state = document.getElementById('userstate').value;
      
+    validating(name);
+    validating(email);
+    validating(phone);
+    validating(city);
+    validating(state);
+
      //create object
       var jsonObject = {username:name, useremail:email, userphone: phone,
       usercity:city,userstate:state}; //get form data into jsonObject object format
@@ -27,4 +33,13 @@
                     "<br/>Phone: " + jsonParse.userphone + "<br/>City: " + jsonParse.usercity + "<br/>State: " + jsonParse.userstate;
     document.getElementById('pars-result').innerHTML = outParse;//send to HTML page
     localStorage.removeItem("storedFile");
+  }
+
+  //validating form data
+  function validating(formData){
+  if ( formData == "") {
+    alert("Please, enter all data.");
+    formData(focus);
+    return;
+   }
   }
