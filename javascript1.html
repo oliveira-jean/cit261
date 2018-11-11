@@ -1,74 +1,119 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
-  <title>Javascript Mobile Development - CIT261</title>
-  <meta charset="UTF-8">
-  <meta name="Description" content="CIT261 - Javascript Mobile Development">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Rye:400,300,700|Roboto" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="./css/reset.css">
-  <!-- CSS reset -->
-  <link rel="stylesheet" href="./css/mainstyle.css">
-  <!-- Main style -->
-  <link rel="stylesheet" href="./css/style12.css">
-  <script type="text/javascript" src="js/compoundinterest.js"></script>
+    <head>
+        <title>Javascript Mobile Development - CIT261</title>
+        <meta charset="UTF-8">
+        <meta name="Description" content="CIT261 - Javascript Mobile Development">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="https://fonts.googleapis.com/css?family=Rye:400,300,700|Roboto"
+            rel="stylesheet"
+            type="text/css">
+        <link rel="stylesheet" href="./css/reset.css">
+        <!-- CSS reset -->
+        <link rel="stylesheet" href="./css/mainstyle.css">
+        <!-- Main style -->
+        <link rel="stylesheet" href="./css/style-js1.css">
+        <!-- Topic style -->
+        
+    </head>
 
-  <!-- This topic CSS code -->
-</head>
-<!-- body content -->
+    <!-- body content -->
+    <body>
 
-<body>
+        <!-- The header -->
+        <header>
+            <div id="leftnav">
+                <a href="index.html" class="nav" id="home">HOME</a>
+                <a href="index.html" class="nav" id="back">BACK</a>
+            </div>
+            <div id="centralheader">
+                <h1>
+                    <span class="blue"></span>CIT261<span class="blue"></span>
+                    <span class="yellow">Javascript Mobile Development</span></h1>
+                <div class="topic_title">
+                    <h2>
+                        <a>JavaScript – Loops, Conditional Statements, Functions, Arrays</a>
+                    </h2>
+                </div>
+            </div>
+            <div id="rightnav">
+                <a href="javascript2.html" class="nav" id="next">NEXT</a>
+            </div>
+        </header>
 
-  <!-- The header -->
+        <!-- The Main Content -->
+        <div class="main">
+            <div class="container1">
+                <!--Balance-->
+<h4>Loops, Functions and Conditional Statements</h4>
+                <h3>This is a simple app to calculate a future value of a investiment. It use
+                    four Javascript Functions and one FOR loop conditional. Functions passing parameters and values 
+                    And IF-ELSE statements to check if values entered are acceptable. When click the button,
+                    the loop interaction is showed aside.
+                </h3>
+                <p>Enter values:</p>
+                <p>Balance :
+                    <input type="text" id="balance" size="7">
+                    (100 - 10,000)</p>
+                <!--Anual Growth rate-->
+                <p>Annual Rate :
+                    <input type="text" id="annualRate" size="5">
+                    (2 - 20)</p>
+                <!--Number of Months-->
+                <p>Months :<input type="text" id="months" size="5">
+                    (6 - 24)</p><br>
+                <button id="future-value" type="button" onclick="futureValue()">Future Value</button>
+                <a href="javascript1.html">
+                    <button id="buttonreset" onclick="resetLoops()">Try Again</button>
+                </a>
+                <div id="output"></div>
 
-  <header>
-    <div id="leftnav">
-      <a href="index.html" class="nav" id="home">HOME</a>
-      <a href="index.html" class="nav" id="back">BACK</a>
-    </div>
-    <div id="centralheader">
-      <h1><span class="blue"></span>CIT261<span class="blue"></span> <span class="yellow">Javascript Mobile Development</span></h1>
-      <div class="topic_title">
-        <h2><a>JavaScript – Loops, Conditional Statements, Functions, Arrays</a></h2>
-      </div>
-    </div>
-    <div id="rightnav">
-      <a href="javascript2.html" class="nav" id="next">NEXT</a>
-    </div>
-  </header>
-   <script src="js/compoundinterest.js"></script>
-  <!-- The Main Content -->
-  <div class="main">
-    <div class="container1">
-      <!--Write topic app content here -->
-      <!--Balance-->
-      <p>Balance : <input type="text" id="balance" size="7"></p><br> 
-      <!--Anual Growth rate-->
-      <p>Annual Rate : <input type="text" id="annualRate" size="5"></p><br>
-      <!--Number of Months-->
-      <p>Months :<input type="text" id="months" size="5"></p><br>
-            <button type="button" onclick="futureValue()">Future Value</button>
-      <div id="output"></div>
-
-
-      <div class="building">
-        <!--<img src="images/underconstruction1.gif"></img>-->
-      </div>
-      </div>
-      </div>
-      <!-- footer information -->
-      <footer id="pageFooter">
-        <div>
-          <p>2018 JavaScript Mobile Development.</p>
-          <p>Jean Oliveira - Portfolio.</p>
+            </div>
+           
+            <div id="box-interaction">
+                <p>For Loop Interactions(months):</p><br>
+                <p id="interaction-item"></p><br>
+            </div>
+            <div class="container1">
+                    <h4>Arrays and Associative Arrays</h4>
+                <h3>This is a example how create and interact values of a simple. In this case, I use 
+                    a FOR - IN loop to populate a HTML Dropdown list. The SUBMIT button have no efect,
+                     only set the value. Click list down arrow to see array text content.
+                </h3>
+                   <form>
+                <p>
+                    <label for="hear-about">How did you hear about us?</label>
+                    <select name="referrer" id="hear-about"></select>
+                    <input type="submit" id="myButton">
+                </p>
+                </form><br>
+                    <h3>Associative arrays are dynamic objects that use keywords to associate the value.
+                       Look a example:
+                    </h3>
+                    <p>var myCar = {
+                            make:"Ford",
+                            model:"Mustang",
+                            year:1969
+                            };</p>
+                            <h3>The array values can be accessed using associate keywords:</h3>
+                            <p>console.log(myCar.model);</p>
+                            <h3>Result:</h3>
+                            <p id="arrayResult"></p> 
+            </div>
         </div>
-        <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
-        <p id="lastupdate"></p>
-      </footer>
-</body>
-<script src="js/lastupdate.js"></script>
 
-
-
+        <!-- footer information -->
+        <footer id="pageFooter">
+            <div>
+                <p>2018 JavaScript Mobile Development.</p>
+                <p>Jean Oliveira - Portfolio.</p>
+            </div>
+            <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
+            <p id="lastupdate"></p>
+        </footer>
+    </body>
+    <script type="text/javascript" src="js/javascript1.js"></script>
+    <script src="js/lastupdate.js"></script>
 </html>

@@ -4,14 +4,14 @@
 <head>
   <title>Javascript Mobile Development - CIT261</title>
   <meta charset="UTF-8">
-  <meta name="Description" CONTENT="CIT261 - Javascript Mobile Development">
+  <meta name="Description" content="CIT261 - Javascript Mobile Development">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Rye:400,300,700|Roboto" rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Rye:400,300,700|Roboto" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./css/reset.css">
   <!-- CSS reset -->
   <link rel="stylesheet" href="./css/mainstyle.css">
   <!-- Main style -->
-  <link rel="stylesheet" href="./css/style12.css">
+  <link rel="stylesheet" href="./css/style-HTML5Tags.css">
 
 
   <!-- This topic CSS code -->
@@ -42,7 +42,38 @@
   <div class="main">
     <div class="container1">
       <!--Write topicapp content here -->
-      <div class="building"><img src="images/underconstruction1.gif"></img>
+     
+          <video id="videoobj" width="480" height="270" poster="https://cdn.hipwallpaper.com/i/62/64/tHPQdb.jpg"
+          tabindex="0" controls>
+              <source src="/videos/flying.mp4" type="video/mp4"/>
+              <!-- <source src="videofile.mp4" type="video/mp4"/> -->
+<source src="videofile.webm" type="video/webm" />
+</video>
+
+<audio id="audio" src="Media/Linus and Lucy.mp3" controls >
+  <p>HTML5 audio is not supported on your browser</p>
+  </audio>
+           
+
+     
+      <div class="container1">
+          <audio id="background" autoplay loop>
+          <source src="audiofile.mp3" type="audio/mpeg" />
+          <source src="audiofile.ogg" type="audio/ogg" />
+          </audio>
+          <div id="audioControls">
+              <input type="button" value="Play" id="play" />
+              <input type="range" id="audioSeek" />
+              <span id="duration"></span>
+              <input type="button" id="mute" value="Mute" />
+              <input type="range" id="volume" min="0" max="1" step="any" />
+              </div>
+
+
+      </div>
+        <div class="container1"></div>
+        
+      </div>
       </div>
       <!-- footer information -->
       <footer id="pageFooter">
@@ -54,5 +85,6 @@
         <p id="lastupdate"></p>
       </footer>
 </body>
+<script src="js/HTML5Tags.js"></script>
 <script src="js/lastupdate.js"></script>
 </html>

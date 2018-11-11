@@ -6,13 +6,14 @@ body {
 .main {
   display: flex;
   justify-content: space-around;
-}
+  }
 
 .container1,
 .button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  border:1px solid yellowgreen;
 }
 
 .container1 {
@@ -90,7 +91,7 @@ button[type=submit] {
 
 button[type=submit]:hover {
   /* in hover,change the color*/
-  color: saddlebrown;
+  color: black;
 }
 
 button[type=submit]:active {

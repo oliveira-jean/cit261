@@ -1,0 +1,95 @@
+body {
+    overflow: scroll;
+    background: snow;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+
+.main h4{
+    text-indent: 3em;
+    margin-bottom: 0.3em;
+    color: darkslategrey;
+    font-weight: bold;
+}
+.container1 {
+    flex-direction: column;
+    height: auto;
+    width: 50vmax;
+    margin-top: 1%;
+    padding: 2%;
+    border: 1px solid gainsboro;
+  }
+
+.container1 h3 {
+    text-indent: 3em;
+    margin-bottom: 0.3em;
+}
+
+p {
+    margin-bottom: .5em;
+    margin-left: 2em;
+    color: rgb(117, 115, 117);
+    font-weight: bold;
+   }
+
+.container1 p:first-of-type {
+    margin-top: 1em;
+}
+#box-interaction {
+    width: auto;
+    margin-top: 1%;
+    padding: 2%;
+    border: 1px solid gainsboro;
+}
+
+#buttonreset,
+#future-value {
+    border: 1px solid rgb(179, 178, 178);
+    margin-left: 6em;
+    padding: 2%;
+    transition: margin-left .5s ease-out;
+}
+ 
+#buttonreset,
+#future-value {
+    border: 1px solid rgb(179, 178, 178);
+    margin-left: 6em;
+    padding: 2%;
+    transition: margin-left .5s ease-out;
+}
+
+
+#output {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3em;
+}
+
+.container1 h1 {
+    font-size: 2.5em;
+    padding-bottom: 0.5%;
+}
+
+#interaction-item {
+    font-size: 0.7em;
+    font-weight: unset;
+    line-height: 1.2em;
+}
+
+#buttonreset:hover,
+#future-value:hover {
+    border: 1px solid rgb(77, 77, 78);
+    cursor: pointer;
+}
+
+#buttonreset:hover,
+#future-value:hover {
+    border: 1px solid rgb(3, 3, 161);
+}
+
+
