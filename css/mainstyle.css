@@ -151,6 +151,10 @@ h2 a {
   color: lime;
 }
 
+.submited {
+  color: rgb(255, 238, 0);
+}
+
 .container a,
 .container a:visited {
   color: #FB667A;
