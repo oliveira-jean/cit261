@@ -13,15 +13,10 @@
   <!-- Main style -->
   <link rel="stylesheet" href="./css/style-HTML5Tags.css">
 
-
-  <!-- This topic CSS code -->
 </head>
-<!-- body content -->
-
+   <!-- body content -->
 <body>
-
   <!-- The header -->
-
   <header>
     <div id="leftnav">
       <a href="index.html" class="nav" id="home">HOME</a>
@@ -42,37 +37,41 @@
   <div class="main">
     <div class="container1">
       <!--Write topicapp content here -->
-     
-          <video id="videoobj" width="480" height="270" poster="https://cdn.hipwallpaper.com/i/62/64/tHPQdb.jpg"
-          tabindex="0" controls>
-              <source src="/videos/flying.mp4" type="video/mp4"/>
-              <!-- <source src="videofile.mp4" type="video/mp4"/> -->
-<source src="videofile.webm" type="video/webm" />
-</video>
-
-<audio id="audio" src="Media/Linus and Lucy.mp3" controls >
-  <p>HTML5 audio is not supported on your browser</p>
-  </audio>
-           
-
-     
+      <h1>HTML5 Video</h1>
+      
+          <video id="videoobj" width="480" height="270"  poster="/images/jeri-poster.jpg"
+             alt="Jericoacoara - Ceará - Brazil" controls>
+             <source src="/videos/jericoacoara-vid.mp4" type="video/mp4"/>
+             <source src="videos/jericoacoara-vid.webmsd.webm" type="video/webm"/>
+             <source src="videos/jericoacoara-vid.oggtheora.ogv" type="video/ogg"/>
+         </video>
+         <br>
+          <h3>Jericoacoara - Ceará - Brazil</h3>
+          <p>One of the most beaultefull places of the world. It's 300km from my city.</p>
+    </div>
       <div class="container1">
-          <audio id="background" autoplay loop>
-          <source src="audiofile.mp3" type="audio/mpeg" />
-          <source src="audiofile.ogg" type="audio/ogg" />
+          <h1>HTML5 Audio</h1>
+          
+          <audio id="audioobj" controls>
+             <source src="/audios/The Good the Bad and the Ugly - wav.wav" type="audio/wav" />
+             <source src="/audios/The Good the Bad and the Ugly - ogg.ogg" type="audio/ogg" />
+             An audio clip from Johann Sebastian Bach.
           </audio>
-          <div id="audioControls">
-              <input type="button" value="Play" id="play" />
-              <input type="range" id="audioSeek" />
-              <span id="duration"></span>
-              <input type="button" id="mute" value="Mute" />
-              <input type="range" id="volume" min="0" max="1" step="any" />
-              </div>
-
-
-      </div>
-        <div class="container1"></div>
-        
+          <br>
+          <h3>The Good the Bad and the Ugly Movie Theme</h3>
+    </div>
+    <div class="container1">
+        <h1>HTML5 Canvas</h1>
+        <p>Added in HTML5, the HTML CANVAS element can be
+          used to draw graphics via scripting in JavaScript.</p>
+    
+          <!-- CANVAS area definition -->
+    <div id="canvasDiv">
+       <canvas id = "canvasArea" width = "400" height = "90">
+          Your browser doesn’t currently support HTML5 Canvas.
+       </canvas> 
+       </div><br>
+       <p>The big rectangle is a HTML Canvas. The color rectangles inside, is Javascript drawing code.</p>
       </div>
       </div>
       <!-- footer information -->
