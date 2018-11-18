@@ -23,17 +23,30 @@ var myObject = {
             document.getElementById('outputObj2').innerHTML = messageOut2;
          }
          }
-
+         var greenObject = new Item("Green", 7);
          function message2(){
-            var greenObject = new Item("Green", 7);
+           
             greenObject.msgOut2();
+           
         }
-//Prototype
+       
+//Prototype, Inheritance
 Item.prototype.isAvailable = true; //add new property isAvailable
 var blueObject = new Item("Blue", 3);
-if (blueObject.isAvailable){
-    var messageOut3 = "The blue object is available";
- }
+
+
 function message3(){
+    if (blueObject.isAvailable){
+        var messageOut3 = "The blue object is available.";
+     }
+    
+     if (greenObject.isAvailable){//Check if greenObject have isAvailable property by Inheritance.
+          var messageOut4 = "And now, the greenObject object have isAvailable property too, by Inheritance.";
+     }
     document.getElementById('outputObj3').innerHTML = messageOut3;
+    document.getElementById('outputObj4').innerHTML = messageOut4;
 }
+console.log(blueObject);
+console.log(greenObject);
+console.log(myObject);
+console.log(greenObject.isAvailable);
