@@ -11,17 +11,13 @@
   <!-- CSS reset -->
   <link rel="stylesheet" href="./css/mainstyle.css">
   <!-- Main style -->
-  <link rel="stylesheet" href="./css/style12.css">
-
+  <link rel="stylesheet" href="./css/style-js2.css">
 
   <!-- This topic CSS code -->
 </head>
 <!-- body content -->
-
 <body>
-
   <!-- The header -->
-
   <header>
     <div id="leftnav">
       <a href="index.html" class="nav" id="home">HOME</a>
@@ -41,9 +37,89 @@
   <!-- The Main Content -->
   <div class="main">
     <div class="container1">
-      <!--Write topicapp content here -->
-      <div class="building"><img src="images/underconstruction1.gif"></img>
+      <!--Write topic content here -->
+      <h1>Objects</h1>
+         <h3>An object is a collection of elements; each element can
+          either be a property or a method. A property holds a single data value, and a method will perform some
+          action that is defined as a function.</h3>
+           <div class="container2">
+              <p>The easiest way to create an object is by specifying the members through a set of
+                  name/value pairs like this:</p><br>
+             <p>var myObject = {</p>
+            <p>color: "Red",</p>
+            <p>count: 5</p>
+            <p>};</p>
+            </div>
+<div class="container2">
+  <h3>You can also define methods using this notation, like this:</h3><br>
+  <p>var myObject = {</p>
+   <p>color: "Red",</p>
+    <p>count: 5,</p>
+  <p>log: function () {</p>
+       <p>var messageOut = "Quantity: " + this.count + ", Color: " + this.color;</p>
+       <p>document.getElementById('outputObj1').innerHTML = messageOut;</p>
+    <p>}</p>
+    <p>};</p><br>
+    <button id="executeObj1" type="button" onclick="message1()">Run</button>
+    <div id="outputObj1"></div>
+</div>
       </div>
+      <div class="container1">
+        <h1>Constructors</h1>
+
+<h3> JavaScript does not use classes. Instead you can reuse an object definition by creating a
+    constructor function. </h3>
+    <div class="container2">
+    <h3>A constructor can take parameters, and this is often used to initialize the
+      properties. For example, you can write your constructor to take a color and a count
+       parameter:</h3><br>
+      <p>function Item(color, count){</p>
+        <p>this.color = color;</p>
+        <p>this.count = count;</p>
+        <p>this.msgOut2 = function () {</p>
+        <p>var messageOut2 = "Quantity: " + this.count + ", Color: " + this.color;</p>
+        <p>document.getElementById('outputObj2').innerHTML = messageOut2;</p>
+        <p>};</p>
+        <p>}</p><br>
+        <h3>Then create the greenObject variable like this:</h3>
+<p>var greenObject = new Item("Green", 7);</p><br>
+<button id="executeObj2" type="button" onclick="message2()">Run</button><br>
+    <div id="outputObj2"></div>
+       </div>
+  </div>
+  <div class="container1">
+<h1>Prototypes</h1>
+<h3>A prototype is a model or blueprint from which actual objects are instantiated.</h3>
+<div class="container2">
+<h3>You can add a property to an existing object like this:</h3>
+<p>greenObject.isAvailable = true;</p>
+<h3>This would add the isAvailable property to the greenObject only; however, 
+  if you add this to the Item prototype then the new property would be available
+   for all instances.</h3>
+   <h3>You can modify the prototype by accessing it with the prototype property of the
+      constructor function:</h3>
+<p>Item.prototype.isAvailable = true;</p>
+<h3>This defines the new property on the prototype and initializes it to true. Now all objects created with the
+Item() constructor will have the isAvailable property:</h3>
+<p>var blueObject = new Item("Blue", 3); //Create a new Item object</p>
+<p>if (blueObject.isAvailable){</p>
+<p>var messageOut3 = "The blue object is available";</p>
+<p>}</p>
+<h3>You can add methods to a prototype in the same way:</h3>
+<p>Item.prototype.add = function(n){this.count += n;};</p>
+<button id="executeObj3" type="button" onclick="message3()">Run</button><br>
+    <div id="outputObj3"></div>
+  </div>
+  <div class="container1">
+    <div class="sources">
+    <h3>Sources:</h3>
+        <p>Pro HTML5 with CSS, JavaScript, and Multimedia</p>
+        <p>Complete Website Development and Best Practices</p>
+        <p>Mark J. Collins</p><br>
+        <p>JavaScript Step by Step, Third Edition</p>
+        <p>Steve Suehring</p>
+    </div>
+  </div>
       <!-- footer information -->
       <footer id="pageFooter">
        <div>
@@ -54,6 +130,7 @@
         <p id="lastupdate"></p>
     </footer>
 </body>
+<script type="text/javascript" src="js/javascript2.js"></script>
 <script src="js/lastupdate.js"></script>
 </html>
 
