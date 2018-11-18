@@ -46,7 +46,4 @@ function message3(){
     document.getElementById('outputObj3').innerHTML = messageOut3;
     document.getElementById('outputObj4').innerHTML = messageOut4;
 }
-console.log(blueObject);
-console.log(greenObject);
-console.log(myObject);
-console.log(greenObject.isAvailable);
+
