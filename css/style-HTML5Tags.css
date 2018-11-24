@@ -1,6 +1,6 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   /* border: 1px solid red; */
 }
@@ -9,12 +9,14 @@ body {
   background-color: snow;
   overflow: visible;
 }
+
 .main {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.main h4{
+
+.main h4 {
   text-indent: 3em;
   margin-bottom: 0.3em;
   color: darkslategrey;
@@ -22,14 +24,15 @@ body {
 }
 
 .container1 {
-    flex-direction: column;
-    justify-content: space-around;
-    height: auto;
-    width: 60vmax;
-    margin-top: 1%;
-    padding: 2% 2% 2% 2%;
-    border: 1px solid gainsboro;
-  }
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+  width: 60vmax;
+  margin-top: 1%;
+  padding: 2% 2% 2% 2%;
+  border: 1px solid gainsboro;
+}
+
 .container1 h3 {
   text-indent: 3em;
   margin-bottom: 0.3em;
@@ -40,11 +43,12 @@ p {
   margin-left: 2em;
   color: rgb(117, 115, 117);
   font-weight: bold;
- }
+}
 
 .container1 p:first-of-type {
   margin-top: 1em;
 }
+
 .container1,
 .button {
   display: flex;
@@ -53,7 +57,7 @@ p {
 }
 
 .container1 h1 {
-   font-size: 2.5em;
+  font-size: 2.5em;
   padding-bottom: .5%;
 }
 
@@ -62,20 +66,19 @@ p {
   margin-left: 2em;
   color: rgb(117, 115, 117);
   font-weight: bold;
- }
+}
 
- .container1 p:first-of-type {
+.container1 p:first-of-type {
   margin-top: 1em;
 }
-#canvasDiv{
-   width:400px;
-   height:90px;
-   margin:0 auto; 
-   padding:5px;
+
+#canvasDiv {
+  width: 400px;
+  height: 90px;
+  margin: 0 auto;
+  padding: 5px;
 }
 
-#canvasArea{
-     border:2px solid black;
+#canvasArea {
+  border: 2px solid black;
 }
-
-
