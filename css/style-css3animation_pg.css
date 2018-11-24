@@ -1,0 +1,154 @@
+body {
+    overflow: scroll;
+    background: snow;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-left: 20%;
+    padding-right: 40%;
+    margin-top: 4%;
+
+}
+
+.main h4 {
+    text-indent: 3em;
+    margin-bottom: 0.3em;
+    color: darkslategrey;
+    font-weight: bold;
+
+
+}
+
+.animpg_container1 {
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    height: auto;
+    width: 450px;
+    height: 450px;
+    padding: 2%;
+    border: 3px solid rgb(172, 172, 172);
+    border-top: 0;
+    top: -460px;
+    border-radius: 0 0 15px 15px;
+    background: whitesmoke;
+    animation: bannermovein 1.0s cubic-bezier(.75, 1.1, .78, .98) 1.5s forwards;
+}
+
+.bannerout {
+    animation: bannermoveout 1.0s cubic-bezier(.33, -0.33, .73, .94) 0s forwards;
+}
+ h1 {
+    font-size: 2.5em;
+ }
+h5 {
+    font-size: 1.5em;
+    line-height: 1.7em;
+}
+
+.animpg_container3 {
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    width: 280px;
+    height: 250px;
+    padding: .8%;
+    right: 10%;
+    top:220px;
+    background:whitesmoke;
+    border: 1px solid rgb(172, 172, 172);
+    transform: scale(1.5);
+    animation: scalein 30s linear forwards;
+}
+
+#img-x {
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+}
+
+#img-x:hover {
+    transform: scale(1.2);
+}
+
+.container1 h1 {
+    font-size: 2.5em;
+    padding-bottom: .5%;
+}
+
+.container1 h3 {
+    text-indent: 3em;
+    margin-bottom: 0.3em;
+}
+
+.container1 p:first-of-type {
+    margin-top: 1em;
+}
+
+p {
+    margin-bottom: .5em;
+    margin-left: 2em;
+    color: rgb(117, 115, 117);
+    font-weight: bold;
+}
+
+.container2 {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin-top: 1%;
+    padding: 2% 2% 2% 10%;
+    border: 1px solid gainsboro;
+}
+
+.container2 h1 {
+    font-size: 2.5em;
+    padding-bottom: 0.5%;
+}
+
+.container2 h3 {
+    text-indent: 3em;
+    margin-bottom: 0.3em;
+}
+
+.container2 p:first-of-type {
+    margin-top: 1em;
+}
+
+@keyframes bannermovein {
+    from {
+        top: -460px;
+    }
+
+    to {
+        top: 120px;
+    }
+}
+@keyframes bannermoveout {
+    from {
+        top: 110px;
+    }
+
+    to {
+        top: -460px;
+    }
+}
+
+@keyframes scalein {
+    from {
+        transform: scale(1.7)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}

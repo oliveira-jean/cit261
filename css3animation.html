@@ -11,21 +11,17 @@
   <!-- CSS reset -->
   <link rel="stylesheet" href="./css/mainstyle.css">
   <!-- Main style -->
-  <link rel="stylesheet" href="./css/style12.css">
-
-
+  <link rel="stylesheet" href="./css/style-animation.css">
   <!-- This topic CSS code -->
 </head>
 <!-- body content -->
 
 <body>
-
   <!-- The header -->
-
   <header>
     <div id="leftnav">
       <a href="index.html" class="nav" id="home">HOME</a>
-      <a href="css3transition.html" class="nav" id="back">BACK</a>
+      <a href="css3animation.html" class="nav" id="back">BACK</a>
     </div>
     <div id="centralheader">
       <h1><span class="blue"></span>CIT261<span class="blue"></span> <span class="yellow">Javascript Mobile Development</span></h1>
@@ -41,18 +37,61 @@
   <!-- The Main Content -->
   <div class="main">
     <div class="container1">
-      <!--Write topicapp content here -->
-      <div class="building"><img src="images/underconstruction1.gif"></img>
+      <h1>CSS3 - Animation</h1>
+      <p>Animation is process of making shape changes and creating motions with elements.</p>
+      <h4>@Keyframes</h4>
+      <p>Keyframes will control the intermediate animation steps in CSS3. The @keyframe rules is aplyed to the elements
+        that receive the animations.</p>
+      <h4>Examples of @keyframe syntaxe:</h4>
+      <p>@keyframes example1 {</p>
+      <p>from {background-color: red;}</p>
+      <p>to {background-color: yellow;}</p>
+      <p>}</p><br>
+      <p>@keyframes example2 {</p>
+      <p>0% {background-color: red;}</p>
+      <p>25% {background-color: yellow;}</p>
+      <p>50% {background-color: blue;}</p>
+      <p>100% {background-color: green;}</p>
+      <p>}</p>
+    </div>
+    <div class="container1">
+      <h4>Some CSS3 Animations</h4>
+      <p>Click the button "Loading..."</p>
+      <div class="loading_container">
+        <div class="none" id="loading_box" onclick="toggle_element()">Loading...</div>
       </div>
-      <!-- footer information -->
-      <footer id="pageFooter">
-      <div>
-          <p>2018 JavaScript Mobile Development.</p>
-          <p>Jean Oliveira - Portfolio.</p>
-        </div>
-        <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
-        <p id="lastupdate"></p>
-      </footer>
+    </div><br>
+    <div class="container1">
+      <h4>The ball</h4>
+      <div class="circle_container2">
+        <div class="circle"></div>
+      </div>
+    </div>
+    <div class="container1">
+      <h4>My last example is a page interacting with the user. Click link bellow.</h4>
+      <div class="container2">
+        <table>
+          <tr>
+            <td></td><a href="css3animation_pg.html">
+              <h1 id="anim-pg">CSS3 Animation Page</h1>
+            </a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- footer information -->
+  <footer id="pageFooter">
+    <div>
+      <p>2018 JavaScript Mobile Development.</p>
+      <p>Jean Oliveira - Portfolio.</p>
+    </div>
+    <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
+    <p id="lastupdate"></p>
+  </footer>
 </body>
+<script src="js/animation.js"></script>
 <script src="js/lastupdate.js"></script>
+
 </html>

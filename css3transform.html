@@ -11,7 +11,7 @@
   <!-- CSS reset -->
   <link rel="stylesheet" href="./css/mainstyle.css">
   <!-- Main style -->
-  <link rel="stylesheet" href="./css/style12.css">
+  <link rel="stylesheet" href="./css/style-transform.css">
 
 
   <!-- This topic CSS code -->
@@ -19,9 +19,7 @@
 <!-- body content -->
 
 <body>
-
   <!-- The header -->
-
   <header>
     <div id="leftnav">
       <a href="index.html" class="nav" id="home">HOME</a>
@@ -42,17 +40,69 @@
   <div class="main">
     <div class="container1">
       <!--Write topicapp content here -->
-      <div class="building"><img src="images/underconstruction1.gif"></img>
-      </div>
-      <!-- footer information -->
-      <footer id="pageFooter">
-      <div>
-          <p>2018 JavaScript Mobile Development.</p>
-          <p>Jean Oliveira - Portfolio.</p>
+      <h1>CSS3 TRANSFORM</h1>
+      <p>CSS Transforms is a module of CSS that defines how elements styled with CSS
+        can be transformed in two-dimensional or three-dimensional space.</p>
+      <p>These transformations include rotation, skewing, scaling, and translation both in the
+        plane and in the 3D space.</p>
+      <h4>Transform Style</h4>
+      <p>The transform-style property specifies how nested elements are rendered in 3D space.</p>
+      <p>Values:</p>
+      <p>Flat: Specifies that child elements will NOT preserve its 3D position.This is default</p>
+      <p>preserve-3d: Specifies that child elements will preserve its 3D position</p>
+      <p>perspective(): doesn’t affect the element itself, but affects the transforms
+        of descendent elements' 3D transforms, allowing them all to have a consistent depth
+        perspective.</p>
+
+      <h4>Transform Origin</h4>
+      <p>The transform-origin CSS property sets the origin for an element's transformations.</p>
+    </div>
+    <div class="container1">
+      <p>This example use transform-style, transform-origin, perspective and rotate properties
+        to draw a cubic.</p>
+      <div class="box">
+        <div class="cubic">
+          <div class="front-face face">
+            <h1>Front</h1>
+          </div>
+          <div class="back-face face">
+            <h1>Back</h1>
+          </div>
+          <div class="right-face face">
+            <h1>Right</h1>
+          </div>
+          <div class="left-face face">
+            <h1>Left</h1>
+          </div>
+          <div class="top-face face">
+            <h1>Top</h1>
+          </div>
+          <div class="bottom-face face">
+            <h1>Bottom</h1>
+          </div>
         </div>
-        <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
-        <p id="lastupdate"></p>
-      </footer>
+      </div>
+    </div>
+    <div class="container1">
+      <p>The Road: This is another example of rotate and perspective transform properties</p>
+      <div class="boxroad">
+        <div class="road">
+          <div class="faixa"></div>
+          <div class="faixa"></div>
+          <div class="faixa"></div>
+        </div>
+      </div>
+    </div>
+    <!-- footer information -->
+    <footer id="pageFooter">
+      <div>
+        <p>2018 JavaScript Mobile Development.</p>
+        <p>Jean Oliveira - Portfolio.</p>
+      </div>
+      <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
+      <p id="lastupdate"></p>
+    </footer>
 </body>
 <script src="js/lastupdate.js"></script>
+
 </html>

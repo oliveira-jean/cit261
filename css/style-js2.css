@@ -2,18 +2,21 @@ body {
   overflow: scroll;
   background: snow;
 }
+
 .main {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
-.main h4{
+
+.main h4 {
   text-indent: 3em;
   margin-bottom: 0.3em;
   color: darkslategrey;
   font-weight: bold;
 }
+
 .container1 {
   flex-direction: column;
   height: auto;
@@ -31,26 +34,29 @@ body {
   font-size: 2.5em;
   padding-bottom: .5%;
 }
+
 .container1 h3 {
   text-indent: 3em;
   margin-bottom: 0.3em;
 }
+
 .container1 p:first-of-type {
   margin-top: 1em;
 }
+
 p {
   margin-bottom: .5em;
   margin-left: 2em;
   color: rgb(117, 115, 117);
   font-weight: bold;
- }
- 
- button {
-     border: 1px solid rgb(179, 178, 178);
-     margin: 1em 6em 1em 1em;
-     padding: 2%;
-     transition: margin-left .5s ease-out;
- }
+}
+
+button {
+  border: 1px solid rgb(179, 178, 178);
+  margin: 1em 6em 1em 1em;
+  padding: 2%;
+  transition: margin-left .5s ease-out;
+}
 
 button[type=submit] {
   display: block;
@@ -76,12 +82,12 @@ button[type=submit]:active {
 }
 
 button:active {
-   background: rgb(193, 193, 231);
+  background: rgb(193, 193, 231);
 }
 
 button:hover {
-    border: 1px solid rgb(3, 3, 161);
-    cursor: pointer;
+  border: 1px solid rgb(3, 3, 161);
+  cursor: pointer;
 }
 
 .container2 {
@@ -93,6 +99,7 @@ button:hover {
   padding: 2% 2% 2% 10%;
   border: 1px solid gainsboro;
 }
+
 .container2 h1 {
   font-size: 2.5em;
   padding-bottom: 0.5%;
@@ -102,9 +109,11 @@ button:hover {
   text-indent: 3em;
   margin-bottom: 0.3em;
 }
+
 .container2 p:first-of-type {
   margin-top: 1em;
 }
-.sources{
+
+.sources {
   font-size: 0.8em;
 }
