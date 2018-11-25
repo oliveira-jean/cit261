@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Javascript Mobile Development - CIT261</title>
+    <meta charset="UTF-8">
+    <meta name="Description" CONTENT="CIT261 - Javascript Mobile Development">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Rye:400,300,700|Roboto" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="./css/mainstyle.css">
+    <!-- Main style -->
+    <link rel="stylesheet" href="./css/style-jstriggering.css">
+
+
+    <!-- This topic CSS code -->
+</head>
+<!-- body content -->
+
+<body>
+
+    <!-- The header -->
+
+    <header>
+        <div id="leftnav">
+            <a href="index.html" class="nav" id="home">HOME</a>
+            <a href="json.html" class="nav" id="back">BACK</a>
+        </div>
+        <div id="centralheader">
+            <h1><span class="blue"></span>CIT261<span class="blue"></span> <span class="yellow">Javascript Mobile
+                    Development</span></h1>
+            <div class="topic_title">
+                <h2><a>Using AJAX to Consume a JSON Web Service</a></h2>
+            </div>
+        </div>
+        <div id="rightnav">
+            <a href="localstorage.html" class="nav" id="next">NEXT</a>
+        </div>
+    </header>
+
+    <!-- The Main Content -->
+    <div class="main">
+        <div class="container1">
+            <h1>Triggering CSS with JavaScript</h1>
+            <p>This is a example how manipulate CSS properties using JavaScript.</p>
+            <p>Enter the CSS property and value, click the button STYLE and it's will
+                be aplyed to the text.</p>
+            <p>Examples:</p>
+            <p>Property = 'background-color'</p>
+            <p>Value = 'blue'</p>
+            <p>Property = 'color'</p>
+            <p>Value = 'red'</p>
+            <div class="container2">
+                <label>Property: </label> <input id="cssproperty" type="text" value=""></input><br />
+                <label>Value: </label> <input id="cssvalue" type="text" value=""></input><br />
+                <button onclick="setStyle()">STYLE</button>
+            </div>
+            <div class="container2">
+                <h4 id="csstext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a malesuada magna. In hac habitasse
+                    platea dictumst. Donec eu
+                    tincidunt dui, et pulvinar orci. Maecenas at magna elit. Duis sodales venenatis felis, ut maximus
+                    ipsum
+                    varius non. Integer fermentum tortor quis mi luctus aliquam. Maecenas est lacus, maximus dignissim
+                    mauris
+                    vel, lobortis semper tellus.
+                </h4>
+            </div>
+        </div>
+        <div class="container1">
+            <h4>It's a Slideout Menu. When clcik in the 3 bar icon, the menu come.
+                It's JavaScript triggered using TOGGLE() property.</h4>
+            <div class="container2">
+                <div class="slideout">
+                    <div class="menu-icon" id="getmenu" onclick="toggleNav()">
+                        <span class="bar bar-1"></span>
+                        <span class="bar bar-2"></span>
+                        <span class="bar bar-3"></span>
+                    </div>
+                    <div class="sidebar" id="sidebar">
+                        <span class="link one">
+                            <h3>HOME</h3>
+                        </span>
+                        <span class="link two">
+                            <h3>SHOP</h3>
+                        </span>
+                        <span class="link three">
+                            <h3>CHECKOUT</h3>
+                        </span>
+                        <span class="link four">
+                            <h3>CONTACT</h3>
+                        </span>
+                    </div>
+                    <div class="box">
+                        <h1>Animated Slideout Menu</h1>
+                        <p>All the Stuff</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer information -->
+    <footer id="pageFooter">
+        <div>
+            <p>2018 JavaScript Mobile Development.</p>
+            <p>Jean Oliveira - Portfolio.</p>
+        </div>
+        <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
+        <p id="lastupdate"></p>
+    </footer>
+</body>
+<script src="js/jstriggering.js"></script>
+<script src="js/lastupdate.js"></script>
+
+</html>
