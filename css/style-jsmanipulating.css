@@ -32,9 +32,8 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    position: relative;
+    width: 50px;
     border: 1px solid rgb(179, 178, 178);
-    margin: 1em 6em 1em 1em;
     padding: 2%;
     transition: margin-left .5s ease-out;
 }
@@ -64,9 +63,8 @@ button {
     display: flex;
     position: relative;
     border: 1px solid rgb(179, 178, 178);
-    margin: 1em 6em 1em 1em;
+    margin-left: 6em;
     padding: 2%;
-    transition: margin-left .5s ease-out;
 }
 
 button[type=submit] {
@@ -80,7 +78,7 @@ button[type=submit] {
     transition: all .3s ease-out;
     /*trasition for hover and  active*/
 }
-
+ 
 button[type=submit]:hover {
     /* in hover,change the color*/
     color: black;
