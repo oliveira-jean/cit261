@@ -2,7 +2,7 @@
 var myRequest = new XMLHttpRequest();
 
 // 2. open the request and pass the HTTP method name and the resource as parameters
-myRequest.open('GET', 'http://cit261.rairanet.com/surprise.html');
+myRequest.open('GET', 'http://cit261.rairanet.com/ajaxrequestfile.html');
 
 // 3. write a function that runs anytime the state of the AJAX request changes
 myRequest.onreadystatechange = function () {
@@ -18,5 +18,5 @@ myRequest.onreadystatechange = function () {
 
 function sendTheAJAX() {
     myRequest.send();
-    /*document.getElementById('reveal').style.display = 'none';*/
+    document.getElementById('hide').style.display = 'none';
 }
