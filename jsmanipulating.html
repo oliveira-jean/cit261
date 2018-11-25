@@ -11,7 +11,7 @@
   <!-- CSS reset -->
   <link rel="stylesheet" href="./css/mainstyle.css">
   <!-- Main style -->
-  <link rel="stylesheet" href="./css/style12.css">
+  <link rel="stylesheet" href="./css/style-jsmanipulating.css">
 
 
   <!-- This topic CSS code -->
@@ -42,17 +42,42 @@
   <div class="main">
     <div class="container1">
       <!--Write topicapp content here -->
-      <div class="building"><img src="images/underconstruction1.gif"></img>
+      <h4>This is a example how manipulate CSS properties using JavaScript.</h4>
+      <p>Enter the CSS property and value, click the button STYLE and it's will
+        be aplyed to the text.</p>
+      <p>Examples:</p>
+      <p>Property = 'background-color'</p>
+      <p>Value = 'blue'</p>
+      <p>Property = 'color'</p>
+      <p>Value = 'red'</p>
+      <div class="container2">
+        <label>Property: </label> <input id="cssproperty" type="text" value=""></input><br />
+        <label>Value: </label> <input id="cssvalue" type="text" value=""></input><br />
+        <button onclick="setStyle()">STYLE</button>
       </div>
-      <!-- footer information -->
-      <footer id="pageFooter">
+      <div class="container2">
+        <h4 id="csstext">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a malesuada magna. In hac habitasse
+          platea dictumst. Donec eu
+          tincidunt dui, et pulvinar orci. Maecenas at magna elit. Duis sodales venenatis felis, ut maximus
+          ipsum
+          varius non. Integer fermentum tortor quis mi luctus aliquam. Maecenas est lacus, maximus dignissim
+          mauris
+          vel, lobortis semper tellus.
+        </h4>
+      </div>
+    </div>
+    <!-- footer information -->
+    <footer id="pageFooter">
       <div>
-          <p>2018 JavaScript Mobile Development.</p>
-          <p>Jean Oliveira - Portfolio.</p>
-        </div>
-        <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
-        <p id="lastupdate"></p>
-      </footer>
+        <p>2018 JavaScript Mobile Development.</p>
+        <p>Jean Oliveira - Portfolio.</p>
+      </div>
+      <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
+      <p id="lastupdate"></p>
+    </footer>
 </body>
+<script src="js/jsmanipulating.js"></script>
 <script src="js/lastupdate.js"></script>
+
 </html>
