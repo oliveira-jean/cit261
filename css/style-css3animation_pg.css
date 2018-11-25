@@ -65,7 +65,7 @@ h5 {
     background:whitesmoke;
     border: 1px solid rgb(172, 172, 172);
     transform: scale(1.5);
-    animation: scalein 25s linear forwards;
+    animation: scalein 20s linear forwards;
 }
 
 #img-x {

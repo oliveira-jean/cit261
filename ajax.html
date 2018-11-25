@@ -11,7 +11,7 @@
   <!-- CSS reset -->
   <link rel="stylesheet" href="./css/mainstyle.css">
   <!-- Main style -->
-  <link rel="stylesheet" href="./css/style12.css">
+  <link rel="stylesheet" href="./css/style-ajax.css">
 
 
   <!-- This topic CSS code -->
@@ -41,19 +41,41 @@
   <!-- The Main Content -->
   <div class="main">
     <div class="container1">
-      <!--Write topicapp content here -->
-      <div class="building"><img src="images/underconstruction1.gif"></img>
-      </div>
-      <!-- footer information -->
-      <footer id="pageFooter">
-        <div>
-          <p>2018 JavaScript Mobile Development.</p>
-          <p>Jean Oliveira - Portfolio.</p>
+      <h1>What's AJAX?</h1>
+      <div class="conatiner2">
+        <p>AJAX stands for Asynchronous JavaScript And XML. In a nutshell,
+          it is the use of the XMLHttpRequest object to communicate with servers.
+          It can send and receive information in various formats, including JSON,
+          XML, HTML, and text files. AJAX’s most appealing characteristic is its
+          "asynchronous" nature, which means it can communicate with the server,
+          exchange data, and update the page without having to refresh the page.</p><br>
+        <h4>The two major features of AJAX allow you to do the following:</h4>
+
+        <p>1. Make requests to the server without reloading the page.</p>
+        <p>2. Receive and work with data from the server.</p>
+        <div class="container1">
+          <h4>Here an example. Click button to get file content from server.</h4><br>
+          <div class="container2">
+          <h1>Today's your special day!</h1>
+
+          <button id="reveal" onclick="sendTheAJAX()" class="button">Why's that?</button>
+          <div id="ajax-content"></div>
+     </div>
         </div>
-        <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
-        <p id="lastupdate"></p>
-      </footer>
+
+      </div>
+    </div>
+    <!-- footer information -->
+    <footer id="pageFooter">
+      <div>
+        <p>2018 JavaScript Mobile Development.</p>
+        <p>Jean Oliveira - Portfolio.</p>
+      </div>
+      <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
+      <p id="lastupdate"></p>
+    </footer>
 </body>
+<script src="js/ajax.js"></script>
 <script src="js/lastupdate.js"></script>
 
 </html>
