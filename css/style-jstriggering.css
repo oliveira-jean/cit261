@@ -230,3 +230,18 @@ button:hover {
     background-color: grey;
     transition: 0.4s;
 }
+
+
+#cloud{
+    background: url(/images/clouds-vector-blue-sky.jpg);
+	width:700px;
+	height:300px;
+}
+@keyframes cloudrun {
+	from { background-position: 0px; }
+	to { background-position: -780px; }
+}
+@-webkit-keyframes cloudrun {
+	from { background-position: 0px; }
+	to { background-position: -780px; }
+}

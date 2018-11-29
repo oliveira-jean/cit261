@@ -6,3 +6,14 @@ function toggleNav() {
     updateElement.classList.toggle("open");
     updateSidebar.classList.toggle("openbar");
 }
+
+
+//cloud
+startbtn.addEventListener("click", function(){
+	cloud.style.animation = "cloudrun 2s steps(100) infinite";
+	cloud.style.webkitAnimation = "cloudrun 2s steps(100) infinite";
+});
+stopbtn.addEventListener("click", function(){
+	cloud.style.animation = "";
+	cloud.style.webkitAnimation = "";
+});

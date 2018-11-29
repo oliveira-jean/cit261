@@ -1,0 +1,201 @@
+body {
+    overflow: scroll;
+    background: snow;
+}
+div,
+button,
+table,
+tr,
+th,
+td
+ {
+    /* border: 1px solid blue;    */
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main h4 {
+    text-indent: 1em;
+    margin-bottom: 0.3em;
+    color: darkslategrey;
+    font-weight: bold;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 70vw;
+    margin-top: 1%;
+    padding: 2%;
+    border: 1px solid gainsboro;
+}
+
+.container1-dom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 70vw;
+    margin-top: 1%;
+    padding: 2%;
+    border: 1px solid gainsboro;
+}
+
+.container3-dom {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin-top: 1%;
+    padding: 2%;
+    border: 1px solid gainsboro;
+}
+ 
+.container-row{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+} 
+
+.container1 h1 {
+    font-size: 2.5em;
+    padding-bottom: .5%;
+}
+
+h3 {
+    text-indent: 3em;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+
+.container1 p:first-of-type {
+    margin-top: 1em;
+    text-indent: 2em;
+}
+
+p {
+    margin-bottom: .5em;
+    margin-left: 2em;
+    color: rgb(117, 115, 117);
+    
+}
+
+button{
+    border: 1px solid rgb(179, 178, 178);
+    width: auto;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+button[type=submit] {
+    display: block;
+    box-shadow: 6px 5px 13px 1px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #d4e4ef 0%, #86aecc 100%);
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    color: darkblue;
+    transition: all .3s ease-out;
+    /*trasition for hover and  active*/
+}
+
+button[type=submit]:hover {
+    /* in hover,change the color*/
+    color: black;
+}
+
+button[type=submit]:active {
+    box-shadow: -5px -5px 9px 1px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #86aecc 0%, #d4e4ef 100%);
+    color: deepskyblue;
+}
+
+button:active {
+    background: rgb(193, 193, 231);
+}
+
+button:hover {
+    border: 1px solid rgb(3, 3, 161);
+    cursor: pointer;
+}
+#anim-pg:hover{
+    transform: scale(1.1);
+    transition: all .5s ease-out;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin-top: 1%;
+    padding: 2% 2% 2% 2%;
+    border: 1px solid gainsboro;
+}
+
+.container3-dom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 30%;
+    margin-top: 1%;
+    padding: 2% 2% 2% 2%;
+    border: 1px solid gainsboro;
+}
+.container-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin-top: 1%;
+    padding: 2% 2% 2% 2%;
+    border: 1px solid gainsboro;
+}
+
+.container2 h1 {
+    font-size: 2.5em;
+    padding-bottom: 0.5%;
+}
+
+.container2 h3 {
+    text-indent: 3em;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+
+.container2 p:first-of-type {
+    margin-top: 1em;
+}
+
+.container3-dom table{
+    font-family:Verdana;
+    border:2px solid #eee;
+    border-collapse: collapse;
+    margin:8px;
+    border: 1px solid gainsboro;
+}
+th{
+    background: rgb(160, 160, 253);
+    color: black;
+}
+td{
+    padding: 1% 1% 1% 10%;
+    
+}
