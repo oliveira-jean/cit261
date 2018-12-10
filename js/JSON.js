@@ -22,7 +22,7 @@
     }
      
   function parseFunc() {
-    var file = localStorage.getItem("storedFile");//get gile saved 
+    var file = localStorage.getItem("storedFile");//get file saved 
     if(!file) {
       alert("Please complete the stringfy part before using this.")};
     var jsonParse = JSON.parse(file); //Parse file to JSON 

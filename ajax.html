@@ -42,29 +42,55 @@
   <div class="main">
     <div class="container1">
       <h1>What's AJAX?</h1>
-      <div class="conatiner2">
-        <p>AJAX stands for Asynchronous JavaScript And XML. In a nutshell,
-          it is the use of the XMLHttpRequest object to communicate with servers.
-          It can send and receive information in various formats, including JSON,
-          XML, HTML, and text files. AJAX’s most appealing characteristic is its
-          "asynchronous" nature, which means it can communicate with the server,
-          exchange data, and update the page without having to refresh the page.</p><br>
-        <h4>The two major features of AJAX allow you to do the following:</h4>
-
-        <p>1. Make requests to the server without reloading the page.</p>
-        <p>2. Receive and work with data from the server.</p>
+      <div class="container2">
+        <h4>AJAX stands for Asynchronous Javascript and XML, it is a set of web technology
+          to send and receive data asynchronously from a client or server, it is done
+          behind the scene and you don't need to reload the webpage, JSON(Javascript
+          Object Notation) have actually replaced XML(eXtensible Markup Language),
+          most of the API's returns JSON data, AJAX can also return plain text.</h4>
       </div>
     </div>
-        <div class="container1">
-          <h4>Here an example. Click button to get file content from server.</h4><br>
-          <div class="container2">
-          <h4>Web address of the file: http://cit261.rairanet.com/ajaxrequestfile.html</h4><br>
 
-          <button id="hide" onclick="sendTheAJAX()" class="button">What's the content?</button>
-          <div id="ajax-content"></div>
-     </div>
+    <div class="container1">
+      <div class="container2">
+        <h4>I'll be demonstrating in the code below how to get data from https://randomuser.me
+          site, an external free and open-source API for generating random user data.
+          Like Lorem Ipsum, but for people.</h4>
+      </div>
+      <div class="container2">
+        <h3>//Create the request Object</h3>
+        <p>var url = "https://randomuser.me/api/?results=5";</p>
+        <p>var request = new XMLHttpRequest();</p>
+        <h3>//Call the open function, GET-type of request, url, true-asynchronous</h3>
+        <p>request.open('GET', url, true);</p>
+        <h3>//call send</h3>
+        <p>request.send();</p>
+        <h3>//Common Types of HTTP Status</h3>
+        <h3>// 200: OK</h3>
+        <h3>// 404: ERROR</h3>
+        <h3>// 403: FORBIDDEN</h3><br>
+        <h4>It's the basic code to fetching the data from web API. I use this in the example
+          bellow. I have create a list of 5 users fetching from https://randomuser.me when the whole page load.
+          But, when click radio button only the users list is reload. There is lot of data of each user, but I
+          show only the picture, first and last names,
+          telephone number and city.</h4>
+        <h4>A DOM manipulating code is used to create the grid list of users</h4>
+        <h4>You can select the number of users and this list will be update asynchronously.
+          A "load" event listener code ensures that the results will be displayed only when
+          "XMLHttpRequest" is completelly load.</h4>
+      </div><br>
+      <h1>User List</h1>
+      <form>
+        <p>Select the number of users:</p>
+        <div id="form">
+          <input type="radio" id="box5" name="num_users" value="5" checked /><label for="box5"> 5 users</label>
+          <input type="radio" id="box15" name="num_users" value="15" /><label for="box15"> 15 users</label>
+          <input type="radio" id="box30" name="num_users" value="30" /> <label for="box30"> 30 users</label>
+          <input type="radio" id="box60" name="num_users" value="60" /><label for="box60"> 60 users</label>
         </div>
-
+      </form>
+      <div class="container3">
+        <div id="users"></div>
       </div>
     </div>
     <!-- footer information -->

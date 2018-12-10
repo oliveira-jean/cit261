@@ -57,30 +57,7 @@ body {
     padding: 2%;
     transition: margin-left .5s ease-out;
   }
-  
-  button[type=submit] {
-    display: block;
-    box-shadow: 6px 5px 13px 1px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(to bottom, #d4e4ef 0%, #86aecc 100%);
-    width: 150px;
-    height: 40px;
-    font-weight: bold;
-    color: darkblue;
-    transition: all .3s ease-out;
-    /*trasition for hover and  active*/
-  }
-  
-  button[type=submit]:hover {
-    /* in hover,change the color*/
-    color: black;
-  }
-  
-  button[type=submit]:active {
-    box-shadow: -5px -5px 9px 1px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(to bottom, #86aecc 0%, #d4e4ef 100%);
-    color: deepskyblue;
-  }
-  
+   
   button:active {
     background: rgb(193, 193, 231);
   }
@@ -99,12 +76,36 @@ body {
     padding: 2% 2% 2% 10%;
     border: 1px solid gainsboro;
   }
-  
+   #users{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    margin-top: 1%;
+    padding: 2% 2% 2% 2%;
+    border: 1px solid gainsboro;
+   }
+
+ li{
+   display: flex;
+     flex-direction: column;
+     padding: 2% 2% 2% 2%;
+     width:150px;
+}
+
+input{
+  margin-left: 30px;
+}
   .container2 h1 {
     font-size: 2.5em;
     padding-bottom: 0.5%;
   }
-  
+  img {
+    width: 100px;
+    max-width: 100%;
+  }
   .container2 h3 {
     text-indent: 3em;
     margin-bottom: 0.3em;
@@ -113,7 +114,6 @@ body {
   .container2 p:first-of-type {
     margin-top: 1em;
   }
-  
-  .sources {
-    font-size: 0.8em;
-  }
+   #form{
+     margin-left:40px;
+   }
