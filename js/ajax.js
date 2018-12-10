@@ -40,6 +40,10 @@ document.getElementById('form').onclick = function () {
 //display results according the number of users
 function display() {
   ul.innerHTML = '';//clear all users
+  //Other way to remove all user
+  // while (ul.hasChildNodes()) {
+  //   ul.removeChild(ul.lastChild);
+  // }
   var newuser;
   var users = JSON.parse(request.responseText);
   if (request.readyState == 4 && request.status == "200") {
