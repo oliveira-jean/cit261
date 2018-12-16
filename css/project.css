@@ -90,7 +90,7 @@ box-shadow: 9px 10px 39px -5px rgba(0,0,0,0.56);
   padding: 5%;
   align-self: center;
   width: 70%;
-  height: auto;
+  height: 700px;
   border: 1px solid gray;
   border-radius: 10px;
   margin-bottom: 5%;
@@ -180,7 +180,7 @@ box-shadow: 9px 10px 39px -5px rgba(0,0,0,0.56);
   width: 20vw;
   height: 20vw;
   opacity: 0;
-  animation: fadeIn 2s ease-out forwards 2s;
+  animation: fadeIn 5s ease-out forwards 3s;
   
     /* border: 1px solid red; */
  }
