@@ -24,7 +24,7 @@ function showPosition(position) {
 function showError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
-        document.getElementById('weather_info_text').innerHTML = "User denied the request for Geolocation. Enter the location name.";
+        document.getElementById('weather_info_text').innerHTML = "User denied the request for Geolocation.";
             break;
         case error.POSITION_UNAVAILABLE:
         document.getElementById('weather_info_text').innerHTML = "Location information is unavailable.";
@@ -36,6 +36,7 @@ function showError(error) {
         document.getElementById('weather_info_text').innerHTML = "An unknown error occurred.";
             break;
     }
+    document.getElementById('loader_icon').style.display = "none";
 }
 //--------------------------------------------------------------------------
 function displayLocation(latitude, longitude) {
