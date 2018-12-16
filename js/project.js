@@ -1,13 +1,17 @@
-
 // ---------------------------------------------------------------------
 document.body.onload = getLocation;
 //----------------------------------------------------------------------
+document.getElementById('update_ico').onclick = function (){
+                   window.location.reload(true);
+        };
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     }
     else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
+        document.getElementById('weather_info_text').innerHTML = "Geolocation is not supported by this browser.";
+        document.getElementById('loader_icon').style.display = "none";
     }
 }
 //-------------------------------------------------------------------------
@@ -20,16 +24,16 @@ function showPosition(position) {
 function showError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation. Enter the location name.";
+        document.getElementById('weather_info_text').innerHTML = "User denied the request for Geolocation. Enter the location name.";
             break;
         case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable.";
+        document.getElementById('weather_info_text').innerHTML = "Location information is unavailable.";
             break;
         case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out. Please, reflesh the page.";
+        document.getElementById('weather_info_text').innerHTML = "The request to get user location timed out. Please, reflesh the page.";
             break;
         case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred.";
+        document.getElementById('weather_info_text').innerHTML = "An unknown error occurred.";
             break;
     }
 }
@@ -63,6 +67,7 @@ function displayLocation(latitude, longitude) {
                 } xhrrequest(geoCity, geoStateCode, geoCountry);
             } else {
                 alert("Geocoder failed due to: " + status);
+                document.getElementById('loader_icon').style.display = "none";
             }
 
         }
@@ -85,6 +90,7 @@ function xhrrequest(geoCity, geoStateCode, geoCountry) {
         if (request.readyState == 4) {
             if (request.status == 200) {
                 var newweather = JSON.parse(request.responseText);
+                document.getElementById('weather_ico_img').src = '/images/weathericons/' + newweather.weather[0].icon + '.png';
                 var weather_value = (Math.round((newweather.main.temp) * 10) / 10).toFixed(1);
                 console.log(request);
                 console.log(newweather);
@@ -94,8 +100,8 @@ function xhrrequest(geoCity, geoStateCode, geoCountry) {
                 document.getElementById('countryId').innerHTML = geoCountry;
                 document.getElementById('weather_info_text').innerHTML = newweather.weather[0].description;
                 document.getElementById('update_date').innerHTML = lastupdate();
-                document.getElementById('weather_ico_img').src = '/images/weathericons/' + newweather.weather[0].icon + '.png';
                 console.log(document.getElementById('weather_info_text').innerHTML = newweather.weather[0].description);
+                document.getElementById('loader_icon').style.display = "none";
             }
             else {
                 alert(request.status);
