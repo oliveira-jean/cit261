@@ -9,12 +9,10 @@
   <link href="https://fonts.googleapis.com/css?family=Rye:400,300,700|Roboto" rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./css/reset.css">
   <!-- CSS reset -->
-  <link rel="stylesheet" href="./css/mainstyle.css">
+  <!-- <link rel="stylesheet" href="./css/mainstyle.css"> -->
   <!-- Main style -->
-  <link rel="stylesheet" href="./css/style12.css">
-
-
-  <!-- This topic CSS code -->
+  <link rel="stylesheet" href="./css/project.css">
+   <!-- This topic CSS code -->
 </head>
 <!-- body content -->
 
@@ -23,37 +21,85 @@
   <!-- The header -->
 
   <header>
-    <div id="leftnav">
-      <a href="index.html" class="nav" id="home">HOME</a>
-      <a href="css3animation.html" class="nav" id="back">BACK</a>
-    </div>
-    <div id="centralheader">
-      <h1><span class="blue"></span>CIT261<span class="blue"></span> <span class="yellow">Javascript Mobile Development</span></h1>
-      <div class="topic_title">
-        <h2><a>Final Project</a></h2>
-      </div>
-    </div>
-     <div id="rightnav">
-      <a href="index.html" class="nav" id="next">HOME</a>
+    <div class="header">
+      <h1>Weather Now</h1>
     </div>
   </header>
-
   <!-- The Main Content -->
   <div class="main">
-    <div class="container1">
-      <!--Write topicapp content here -->
-      <div class="building"><img src="images/underconstruction1.gif"></img>
+    <div id="card1">
+    <div id="location">
+      <img src="/images/WeatherIcons/icon6.png" id="gps_ico_img"/>
+      <h2 id="cityName"></h2>
+      <h2 id="stateCode"></h2>
+      <h2 id="countryId"></h2>
+    </div>
+    <div id="weather_container">
+       <div id="weather_box">
+          <div id="weather_now">
+              <div id="weather_value"></div>
+              <div id="temp_ico">
+                 <img src="/images/WeatherIcons/celsius-2.png" id="temp_ico_img"/>
+              </div>
+          </div>
+          <div id="weather_info">
+              <h3 id="weather_info_text"></h3>
+          </div>
+          <div id="update_box">
+              
+              <h3 id="update_info">Update:</h3>
+              <h3 id="update_date" >Not Available</h3>
+              <div id="update_ico">
+                  <img src="/images/WeatherIcons/loading1.png" id="update_ico_img"/>
+              </div>
+          </div>
+       </div>  
+       <div id="weather_info_box">
+          <div id="weather_ico">
+            <img src="" id="weather_ico_img"/>
+          </div>
+          
+       </div>   
       </div>
-      <!-- footer information -->
-      <footer id="pageFooter">
-        <div>
-          <p>2018 JavaScript Mobile Development.</p>
-          <p>Jean Oliveira - Portfolio.</p>
-        </div>
-        <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
-        <p id="lastupdate"></p>
-      </footer>
+    </div>
+   
+    <div id="card2">
+    <div id="new_location">
+      <div id="new_location_info">
+        <h2 id="new_location_title">New Location:</h2>
+        <select id="new_country"> 
+          <option id="Country">Country</option>
+        </select>
+        <select id="new_state"> 
+          <option id="State">State</option>
+        </select>
+          <select id="new_city"> 
+          <option id="City">City</option>
+        </select>
+      </div>
+      <div id="new_location_button">
+        <img src="images/WeatherIcons/reset-button-template.png" id="new_loc_button"/>
+      </div>
+    </div>
+    </div>
+    <div id="card3">
+    <div id="map">
+      <h2>Map</h2>
+      <div id="map_box"></div>
+    </div>
+    </div>
+    <!-- footer information -->
+    <footer id="pageFooter">
+      <div>
+        <p>2018 JavaScript Mobile Development.</p>
+        <p>Jean Oliveira - Portfolio.</p>
+      </div>
+      <!--<p><?php echo 'Last Updated: ' . date('j F, Y', getlastmod()); ?></p>-->
+      <p id="lastupdate"></p>
+    </footer>
 </body>
+<script src="js/project.js"></script>
 <script src="js/lastupdate.js"></script>
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyAbi67rJ8md3UCIjwuITqjYDnHEW7ptzio"></script>
 
 </html>
