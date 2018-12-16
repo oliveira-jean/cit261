@@ -73,7 +73,7 @@ header h1{
   padding: 3%;
   align-self: center;
   width: 70%;
-  height: auto;
+  height: 30em;
   border: 1px solid gray;
   border-radius: 10px;
   margin-top: 1%;
@@ -90,7 +90,7 @@ box-shadow: 9px 10px 39px -5px rgba(0,0,0,0.56);
   padding: 5%;
   align-self: center;
   width: 70%;
-  height: 700px;
+  height: auto;
   border: 1px solid gray;
   border-radius: 10px;
   margin-bottom: 5%;
@@ -162,7 +162,7 @@ box-shadow: 9px 10px 39px -5px rgba(0,0,0,0.56);
 }
 
 #temp_ico{
-  width:auto;
+   width:auto;
   height: auto;
 }
 
@@ -177,6 +177,8 @@ box-shadow: 9px 10px 39px -5px rgba(0,0,0,0.56);
  }
 
 #weather_ico_img{
+  margin-top: 2%;
+  margin-bottom: 2%;
   width: 20vw;
   height: 20vw;
   opacity: 0;
