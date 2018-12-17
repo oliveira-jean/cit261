@@ -7,12 +7,13 @@
   <meta name="Description" CONTENT="CIT261 - Javascript Mobile Development">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Rye:400,300,700|Roboto" rel='stylesheet' type='text/css'>
+
   <link rel="stylesheet" href="./css/reset.css">
   <!-- CSS reset -->
   <!-- <link rel="stylesheet" href="./css/mainstyle.css"> -->
   <!-- Main style -->
   <link rel="stylesheet" href="./css/project.css">
-   <!-- This topic CSS code -->
+  <!-- This topic CSS code -->
 </head>
 <!-- body content -->
 
@@ -28,77 +29,78 @@
   <!-- The Main Content -->
   <div class="main">
     <div id="card1">
-        <div class="overlay-loader" id="loader_icon">
-            <div class="loader">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+      <div class="overlay-loader" id="loader_icon">
+        <div class="loader">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div id="location">
+        <img id="gps_ico_img" />
+        <h2 id="cityName"></h2>
+        <h2 id="stateCode"></h2>
+        <h2 id="countryId"></h2>
+      </div>
+      <div id="weather_container">
+        <div id="weather_box">
+          <div id="weather_now">
+            <div id="weather_value"></div>
+            <div id="temp_ico">
+              <img id="temp_ico_img" />
             </div>
           </div>
-    <div id="location">
-      <img src="/images/weathericons/icon6.png" id="gps_ico_img"/>
-      <h2 id="cityName"></h2>
-      <h2 id="stateCode"></h2>
-      <h2 id="countryId"></h2>
-    </div>
-    <div id="weather_container">
-       <div id="weather_box">
-          <div id="weather_now">
-              <div id="weather_value"></div>
-              <div id="temp_ico">
-                 <img src="/images/weathericons/celsius-2.png" id="temp_ico_img"/>
-              </div>
+         
+          <div id="update_box">
+            <h3 id="update_info">Update:</h3>
+            <h3 id="update_date">Not Available</h3>
+            <div id="update_ico">
+              <img src="/images/weathericons/loading1.png" id="update_ico_img" />
+            </div>
+          </div>
+        </div>
+        <div id="weather_info_box">
+          <div id="weather_ico">
+            <img id="weather_ico_img" />
           </div>
           <div id="weather_info">
-              <h3 id="weather_info_text"></h3>
+            <h3 id="weather_info_text"></h3>
           </div>
-          <div id="update_box">
-              
-              <h3 id="update_info">Update:</h3>
-              <h3 id="update_date" >Not Available</h3>
-              <div id="update_ico">
-                  <img src="/images/weathericons/loading1.png" id="update_ico_img" />
-              </div>
-          </div>
-       </div>  
-       <div id="weather_info_box">
-          <div id="weather_ico">
-            <img id="weather_ico_img"/>
-          </div>
-          
-       </div>   
+        </div>
+      </div>
+    </div>
+
+    <div id="card3">
+      <div id="map">
+        <h2>Map</h2>
+        <div id="map_box"></div>
+      </div>
+    </div>
+
+    <div id="card2">
+      <div id="new_location">
+        <div id="new_location_info">
+          <h2 id="new_location_title">New Location:</h2>
+          <select id="new_country">
+            <option id="Country">Country</option>
+          </select>
+          <select id="new_state">
+            <option id="State">State</option>
+          </select>
+          <select id="new_city">
+            <option id="City">City</option>
+          </select>
+        </div>
+        <div id="new_location_button">
+          <img src="/images/weathericons/reset-button-template.png" id="new_loc_button" />
+        </div>
       </div>
     </div>
    
-    <div id="card2">
-    <div id="new_location">
-      <div id="new_location_info">
-        <h2 id="new_location_title">New Location:</h2>
-        <select id="new_country"> 
-          <option id="Country">Country</option>
-        </select>
-        <select id="new_state"> 
-          <option id="State">State</option>
-        </select>
-          <select id="new_city"> 
-          <option id="City">City</option>
-        </select>
-      </div>
-      <div id="new_location_button">
-        <img src="/images/weathericons/reset-button-template.png" id="new_loc_button"/>
-      </div>
-    </div>
-    </div>
-    <div id="card3">
-    <div id="map">
-      <h2>Map</h2>
-      <div id="map_box"></div>
-    </div>
-    </div>
     <!-- footer information -->
     <footer id="pageFooter">
       <div>

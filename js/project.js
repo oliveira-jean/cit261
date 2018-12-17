@@ -92,7 +92,9 @@ function xhrrequest(geoCity, geoStateCode, geoCountry) {
             if (request.status == 200) {
                 var newweather = JSON.parse(request.responseText);
                 document.getElementById('weather_ico_img').src = '/images/weathericons/' + newweather.weather[0].icon + '.png';
-                var weather_value = (Math.round((newweather.main.temp) * 10) / 10).toFixed(1);
+                document.getElementById('temp_ico_img').src = '/images/weathericons/graus.svg'; 
+                document.getElementById('gps_ico_img').src = '/images/weathericons/icon6.png'; 
+                var weather_value = (Math.round((newweather.main.temp) * 10) / 10);
                 console.log(request);
                 console.log(newweather);
                 document.getElementById('weather_value').innerHTML = weather_value;
