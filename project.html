@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="Description" CONTENT="CIT261 - Javascript Mobile Development">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Rye:400,300,700|Roboto" rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Rye:400,300,700%7CRoboto" rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="./css/reset.css">
   <!-- CSS reset -->
@@ -18,9 +18,7 @@
 <!-- body content -->
 
 <body>
-
   <!-- The header -->
-
   <header>
     <div class="header">
       <h1>Weather Now</h1>
@@ -29,22 +27,14 @@
   <!-- The Main Content -->
   <div class="main">
     <div id="card1">
-      <div class="overlay-loader" id="loader_icon">
-        <div class="loader">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+      <div id="loader_icon" class="loader">
       </div>
       <div id="location">
-        <img id="gps_ico_img" />
-        <h2 id="cityName"></h2>
-        <h2 id="stateCode"></h2>
-        <h2 id="countryId"></h2>
+        <img id="gps_ico_img" src=" " />
+        <h2 id="geoNeighborhood" class="margin1"></h2>
+        <h2 id="cityName" class="margin1"></h2>
+        <h2 id="stateCode" class="margin1"></h2>
+        <h2 id="countryId" class="margin1"></h2>
       </div>
       <div id="weather_container">
         <div id="weather_box">
@@ -54,33 +44,58 @@
               <img id="temp_ico_img" />
             </div>
           </div>
-         
+          <div id="details">
+            <table>
+              <tbody>
+                  <tr>
+                      <td>
+                        <h3 id="feels_like"></h3>
+                      </td>
+                      <td>
+                        <h3 id="blank"></h3>
+                      </td>
+                    </tr>
+                <tr>
+                  <td>
+                    <h3 id="temp_max"></h3>
+                  </td>
+                  <td>
+                    <h3 id="temp_min"></h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h3 id="humidity"></h3>
+                  </td>
+                  <td>
+                    <h3 id="pressure"></h3>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
           <div id="update_box">
             <h3 id="update_info">Update:</h3>
             <h3 id="update_date">Not Available</h3>
             <div id="update_ico">
-              <img src="/images/weathericons/loading1.png" id="update_ico_img" />
+              <img id="update_ico_img" src="/images/weathericons/loading1.png" />
             </div>
           </div>
         </div>
         <div id="weather_info_box">
-          <div id="weather_ico">
-            <img id="weather_ico_img" />
-          </div>
           <div id="weather_info">
             <h3 id="weather_info_text"></h3>
           </div>
         </div>
       </div>
     </div>
-
     <div id="card3">
       <div id="map">
-        <h2>Map</h2>
+        <h2>Map</h2>87
         <div id="map_box"></div>
       </div>
     </div>
-
     <div id="card2">
       <div id="new_location">
         <div id="new_location_info">
@@ -100,7 +115,7 @@
         </div>
       </div>
     </div>
-   
+
     <!-- footer information -->
     <footer id="pageFooter">
       <div>

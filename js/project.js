@@ -1,9 +1,13 @@
 // ---------------------------------------------------------------------
 document.body.onload = getLocation;
 //----------------------------------------------------------------------
-document.getElementById('update_ico').onclick = function (){
-                   window.location.reload(true);
-        };
+document.getElementById('update_ico_img').onclick = function () {
+    window.location.reload(true)
+};
+
+function hideSpin() {
+    document.getElementById('loader_icon').style.display = "none";
+}
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -11,106 +15,135 @@ function getLocation() {
     }
     else {
         document.getElementById('weather_info_text').innerHTML = "Geolocation is not supported by this browser.";
-        document.getElementById('loader_icon').style.display = "none";
     }
 }
 //-------------------------------------------------------------------------
 function showPosition(position) {
-    lat = position.coords.latitude;
-    lon = position.coords.longitude;
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
     displayLocation(lat, lon);
 }
 //--------------------------------------------------------------------------
 function showError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
-        document.getElementById('weather_info_text').innerHTML = "User denied the request for Geolocation.";
+            document.getElementById('weather_info_text').innerHTML = "User denied the request for Geolocation.";
             break;
         case error.POSITION_UNAVAILABLE:
-        document.getElementById('weather_info_text').innerHTML = "Location information is unavailable.";
+            document.getElementById('weather_info_text').innerHTML = "Location information is unavailable.";
             break;
         case error.TIMEOUT:
-        document.getElementById('weather_info_text').innerHTML = "The request to get user location timed out. Please, reflesh the page.";
+            document.getElementById('weather_info_text').innerHTML = "The request to get user location timed out. Please, reflesh the page.";
             break;
         case error.UNKNOWN_ERROR:
-        document.getElementById('weather_info_text').innerHTML = "An unknown error occurred.";
+            document.getElementById('weather_info_text').innerHTML = "An unknown error occurred.";
             break;
     }
-    document.getElementById('loader_icon').style.display = "none";
+    hideSpin();
 }
 //--------------------------------------------------------------------------
-function displayLocation(latitude, longitude) {
+function displayLocation(lat, lon) {
     var geocoder;
     geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(latitude, longitude);
-    geocoder.geocode(
+    var latlng = new google.maps.LatLng(lat, lon);
+    console.log("Latitude: " + lat);
+    console.log("Longitude: " + lon);
+    geocoder.geocode (
         { 'latLng': latlng },
         function (results, status) {
-            var geoCity = "? City ?";
-            var geoCountry = "*? Country ?";
-            var geoStateCode = "? State ?";
-            console.log(results);
+            var geoNeighborhood = " ";
+            var geoCity = " ";
+            var geoStateCode = " ";
+            var geoCountry = " ";
+            
             console.log(status);
             if (status == google.maps.GeocoderStatus.OK) {
+                console.log(results);
                 for (var r = 0; r < results.length; r++) {
-                    if ((results[r].types[0]) == ('locality'||'sublocality')) {
-                        geoCity = results[r].address_components[0].long_name;
-                        console.log('city:' + geoCity);
+                    //console.log(results[r]);
+                    for (var t = 0; t < results[r].types.length; t++) {
+                        //console.log(results[r].types[t]);
+                        if ((results[r].types[t]) == ('sublocality_level_1')) {
+                            geoNeighborhood = results[r].address_components[0].long_name;
+                            console.log('Bairro:' + geoNeighborhood);
+                        }
+                        if ((results[r].types[t]) == ('administrative_area_level_2')) {
+                            geoCity = results[r].address_components[0].long_name;
+                            console.log('city:' + geoCity);
+                        }
+                        if ((results[r].types[t]) == 'administrative_area_level_1') {
+                            geoStateCode = results[r].address_components[0].short_name;
+                            console.log('state:' + geoStateCode);
+                        }
+                        if ((results[r].types[t]) == 'country') {
+                            geoCountry = results[r].address_components[0].long_name;
+                            console.log('country:' + geoCountry);
+                        }
                     }
-                    if ((results[r].types[0]) == 'administrative_area_level_1') {
-                        geoStateCode = results[r].address_components[0].short_name;
-                        console.log('state:' + geoStateCode);
-                    }
-                    if ((results[r].types[0]) == 'country') {
-                        geoCountry = results[r].address_components[0].long_name;
-                        console.log('country:' + geoCountry);
-                    }
-                } xhrrequest(geoCity, geoStateCode, geoCountry);
+                }
+                document.getElementById('geoNeighborhood').innerHTML = geoNeighborhood;
+                document.getElementById('cityName').innerHTML = geoCity;
+                document.getElementById('stateCode').innerHTML = geoStateCode;
+                xhrrequest(lat, lon);
             } else {
                 alert("Geocoder failed due to: " + status);
-                document.getElementById('loader_icon').style.display = "none";
+                hideSpin();
             }
-
         }
-
     );
-
 }
 
 //--------------------------------------------------------------------------
-function xhrrequest(geoCity, geoStateCode, geoCountry) {
+function xhrrequest(lat, lon) {
+    var type = "accurate";
+    var units = "metric";//Celsius
     var openWeatherMapKey = "8cd306ebf16ad6add7f9967f777421f3";
-    var unitCelsius = "&units=metric";//for Celsius
-    var requestString = "https://api.openweathermap.org/data/2.5/weather?q=" + geoCity + "&APPID=";
+    var requestString = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&type=" + type + "&units=" + units + "&APPID=" + openWeatherMapKey;
     var request = new XMLHttpRequest();
-    var url = requestString + openWeatherMapKey + unitCelsius;
+    
     //Call the open function, GET-type of request, url, true-asynchronous
-    request.open('GET', url, true);
+    request.open('GET', requestString, true);
+    console.log(request);
+        
+    request.timeout = 3000;
+    request.ontimeout = function () { 
+    hideSpin();
+    alert("Timed out! Try update button!"); };  
     
     request.onreadystatechange = function () {
         if (request.readyState == 4) {
             if (request.status == 200) {
                 var newweather = JSON.parse(request.responseText);
-                document.getElementById('weather_ico_img').src = '/images/weathericons/' + newweather.weather[0].icon + '.png';
-                document.getElementById('temp_ico_img').src = '/images/weathericons/graus.svg'; 
-                document.getElementById('gps_ico_img').src = '/images/weathericons/icon6.png'; 
-                var weather_value = (Math.round((newweather.main.temp) * 10) / 10);
-                console.log(request);
                 console.log(newweather);
+                //code for openweathermap.org weather data
+                document.getElementById('temp_ico_img').src = '/images/weathericons/graus.svg';
+                document.getElementById('gps_ico_img').src = '/images/weathericons/icon6.png';
+                var weather_value = Math.round((newweather.main.temp * 10) / 10);
                 document.getElementById('weather_value').innerHTML = weather_value;
-                document.getElementById('cityName').innerHTML = newweather.name;
-                document.getElementById('stateCode').innerHTML = geoStateCode;
-                document.getElementById('countryId').innerHTML = geoCountry;
                 document.getElementById('weather_info_text').innerHTML = newweather.weather[0].description;
+                document.getElementById('humidity').innerHTML = "Humidity  " + newweather.main.humidity;
+                document.getElementById('temp_max').innerHTML = "Max.  " + newweather.main.temp_max;
+                document.getElementById('temp_min').innerHTML = "Min.  " + newweather.main.temp_min;
+                document.getElementById('pressure').innerHTML = "Pressure  " + newweather.main.pressure;
                 document.getElementById('update_date').innerHTML = lastupdate();
-                console.log(document.getElementById('weather_info_text').innerHTML = newweather.weather[0].description);
-                document.getElementById('loader_icon').style.display = "none";
+                request.addEventListener('load', function (e) {
+                    var newweather = JSON.parse(request.responseText);
+                    var parentElement = document.getElementById("weather_info_box");
+                    var childElement = document.createElement("img");
+                    childElement.setAttribute('id', 'weather_ico_img');
+                    childElement.src = '/images/weathericons/' + newweather.weather[0].icon + '.png';
+                    parentElement.appendChild(childElement); 
+                    // parentElement.insertBefore(childElement, parentElement.childNodes[0]);
+                });
+                hideSpin();
+          } 
+           else {
+               //var weatherError = JSON.parse(request.responseText);
+               alert(request.status + " --> " + request.statusText+" please, try again.");
+               hideSpin();
             }
-            else {
-                alert(request.status);
-            }
-        }
-    };
+      }
+};
     //call send
     request.send();
     //console.log(request);
